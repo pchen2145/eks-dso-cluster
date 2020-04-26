@@ -1,0 +1,12 @@
+- hosts: 127.0.0.1
+  connection: local
+  become: true
+  
+  vars:
+    jenkins_hostname: jenkinsdns 
+    java_packages:
+      - java-1.8.0-openjdk 
+
+  roles:
+    - ansible-role-java 
+    - ansible-role-jenkins 
